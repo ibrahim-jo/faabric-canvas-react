@@ -65,15 +65,17 @@ const CanvaFabric = () => {
         settoggle(false)
       }
       else{
-        console.log('red')
-        //changeColorPen('red')
-        canvFabric.clear()
-        canvFabric.backgroundColor='red'
+        changeColorPen('red')
         settoggle(true)
         canvFabric.renderAll.bind(canvFabric)
       }
       
     }
+   }
+   const cleanAll=()=>{
+    canvFabric.clear()
+    canvFabric.backgroundColor='red'
+    canvFabric.renderAll.bind(canvFabric)
    }
    const togglepen=()=>{
     console.log(CanvaFabric.backgroundColor)
@@ -99,7 +101,9 @@ const CanvaFabric = () => {
       <h1>CanvaFabric </h1>
       <canvas  ref={canvaRef} />
       <button onClick={()=>addCircle()}>Circle</button>
-      <button onClick={()=>addRec()}>Rectangle</button>
+      <button onClick={()=>addRec()}>Rectangle</button>   
+      <button onClick={()=>cleanAll()}>Clean</button>
+
       {widthPen}
         <input type='range' onChange={(e)=>changeWidthPen(e.target.value)}  value={widthPen} min={1} max={30} />
         <input type='color' onChange={(e)=>changeColorPen(e.target.value)}  value={colorPen}  />
