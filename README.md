@@ -1,9 +1,11 @@
-# white bord 
+# white board 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## its a demo project to learn  more aboute canvas 
 
+ use  fabricjs , reactjs 
+ 
 In the project directory, you can run:
 
 ### `npm start`
